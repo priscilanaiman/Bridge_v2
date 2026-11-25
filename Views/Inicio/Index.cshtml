@@ -4,20 +4,17 @@
 }
 
 <section class="hero">
-    <svg class="hero-heart" viewBox="0 0 60 56" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M30 50C14 38 5 28 6 17 7 9 14 5 20 6c5 1 8 5 10 9 2-5 6-9 12-9 7 0 12 6 11 13-1 11-12 21-21 30"/><path d="M8 52c10 1 18-1 26-4"/></svg>
+    <span class="hero-heart" aria-hidden="true"></span>
     <h1 class="hero-title"><span class="thin">Hola, @ViewBag.Nombre.</span><span class="bold">Empecemos a organizarnos.</span></h1>
     <p class="hero-sub">Bridge reúne a la familia y a quienes cuidan en un grupo de cuidado, con un chat compartido para que nadie se pierda nada.</p>
-    <svg class="hero-wave" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0 52 C 220 8, 420 10, 640 40 S 1020 78, 1200 22 V80 H0z" style="fill:var(--wave-1)"/>
-        <path d="M0 70 C 260 40, 520 44, 760 62 S 1080 74, 1200 54 V80 H0z" style="fill:var(--wave-2)"/>
-    </svg>
+    <div class="hero-wave"></div>
     <span class="script">Juntos somos puentes</span>
 </section>
 
 <section class="card">
     <div class="empty">
-        <span class="icon-badge soft"><svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M2 21a7 7 0 0 1 14 0 M16 3.5a4 4 0 0 1 0 7 M18 14a6 6 0 0 1 4 7"></path></svg></span>
+        <span class="icon-badge soft"><span class="icono icono-personas" aria-hidden="true"></span></span>
         <p class="muted">Todavía no tenés grupos. Creá uno para la persona que cuidás, o pedile a quien administra su grupo que te invite.</p>
-        <button type="button" class="btn sm secondary"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14 M5 12h14"></path></svg> Crear grupo de cuidado</button>
+        <button type="button" class="btn sm secondary"><span class="icono icono-mas icono-sm" aria-hidden="true"></span> Crear grupo de cuidado</button>
     </div>
 </section>
