@@ -4,16 +4,31 @@
 
 <div class="auth">
     <aside class="auth-brand">
-    <a class="lp-brand" href='@Url.Action("Index", "Home")' aria-label="Volver al inicio"><img src="~/img/logo.svg" alt="Bridge"><span><span class="brand-name">BRIDGE</span><span class="brand-tag bloque">Conservando la vida</span></span></a>
-    <div class="stack gap-14"><h1 class="lp-h2"><span class="thin">Qué bueno</span> <span class="bold">verte de nuevo.</span></h1><p class="lp-lead hide-sm">Todo lo que el grupo fue registrando te está esperando: la agenda, la medicación y las novedades del chat.</p></div>
-    <p class="script hide-sm">Juntos somos puentes</p>
-    <div class="hero-wave"></div>
-  </aside>
-    <div class="auth-form"><form class="auth-card" action='@Url.Action("Login", "Sesiones")' method="post" novalidate>
-      <div><div class="eyebrow">Ingresar</div><h2 class="auth-title">Hola de nuevo</h2><p class="muted">¿No tenés cuenta? <a href='@Url.Action("Registrarse", "Sesiones")'>Creá una gratis</a></p></div>
-      <div class="field"><label for="li-email">Email</label><input id="li-email" class="input" type="email" name="email" value="@ViewBag.Email" autocomplete="email"></div>
-      <div class="field"><label for="li-pass">Contraseña</label><input id="li-pass" class="input" type="password" name="contrasena" autocomplete="current-password"></div>
-      <p class="form-error" role="alert">@ViewBag.Error</p>
-      <button class="btn lg" type="submit">Ingresar</button>
-    </form></div>
+        <a class="lp-brand" href='@Url.Action("Index", "Home")' aria-label="Volver al inicio"><img src="~/img/logo.svg" alt="Bridge"><span><span class="brand-name">BRIDGE</span><span class="brand-tag bloque">Conservando la vida</span></span></a>
+        <div class="stack gap-14">
+            <h1 class="lp-h2"><span class="thin">Qué bueno</span> <span class="bold">verte de nuevo.</span></h1>
+            <p class="lp-lead hide-sm">Todo lo que el grupo fue registrando te está esperando: la agenda, la medicación y las novedades del chat.</p>
+        </div>
+        <p class="script hide-sm">Juntos somos puentes</p>
+        <div class="hero-wave"></div>
+    </aside>
+    <div class="auth-form">
+        <form class="auth-card" action='@Url.Action("Login", "Sesiones")' method="post" novalidate>
+            <div>
+                <div class="eyebrow">Ingresar</div>
+                <h2 class="auth-title">Hola de nuevo</h2>
+                <p class="muted">¿No tenés cuenta? <a href='@Url.Action("Registrarse", "Sesiones")'>Creá una gratis</a></p>
+            </div>
+            <div class="field">
+                <label for="li-email">Email</label>
+                <input id="li-email" class="input" type="email" name="email" value="@ViewBag.Email" autocomplete="email">
+            </div>
+            <div class="field">
+                <label for="li-pass">Contraseña</label>
+                <input id="li-pass" class="input" type="password" name="contrasena" autocomplete="current-password">
+            </div>
+            <p class="form-error" role="alert">@ViewBag.Error</p>
+            <button class="btn lg" type="submit">Ingresar</button>
+        </form>
+    </div>
 </div>
