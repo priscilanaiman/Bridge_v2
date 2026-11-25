@@ -61,7 +61,7 @@ CREATE PROCEDURE ObtenerMisGrupos
     @IdUsuario INT
 AS
 BEGIN
-    SELECT Grupos.IdGrupo, AdultosMayores.Nombre, AdultosMayores.Apellido, AdultosMayores.FechaNacimiento, Miembros.Rol
+    SELECT Grupos.IdGrupo, AdultosMayores.Nombre, AdultosMayores.Apellido, AdultosMayores.FechaNacimiento
     FROM Miembros
     INNER JOIN Grupos ON Miembros.IdGrupo = Grupos.IdGrupo
     INNER JOIN AdultosMayores ON Grupos.IdAdultoMayor = AdultosMayores.IdAdultoMayor
@@ -75,7 +75,7 @@ CREATE PROCEDURE ObtenerGrupo
     @IdUsuario INT
 AS
 BEGIN
-    SELECT Grupos.IdGrupo, Grupos.IdUsuarioResponsable, AdultosMayores.Nombre, AdultosMayores.Apellido, AdultosMayores.FechaNacimiento, AdultosMayores.CondicionSalud, Miembros.Rol
+    SELECT Grupos.IdGrupo, Grupos.IdUsuarioResponsable, AdultosMayores.Nombre, AdultosMayores.Apellido, AdultosMayores.FechaNacimiento, AdultosMayores.CondicionSalud
     FROM Miembros
     INNER JOIN Grupos ON Miembros.IdGrupo = Grupos.IdGrupo
     INNER JOIN AdultosMayores ON Grupos.IdAdultoMayor = AdultosMayores.IdAdultoMayor

@@ -8,7 +8,6 @@ public class Grupo
     public string Apellido { get; set; } = "";
     public DateTime FechaNacimiento { get; set; }
     public string? CondicionSalud { get; set; }
-    public string Rol { get; set; } = "";
 
     public int Edad
     {
