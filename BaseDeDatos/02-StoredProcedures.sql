@@ -1,22 +1,23 @@
 USE Bridge
 GO
 
-CREATE OR ALTER PROCEDURE RegistrarUsuario
+CREATE PROCEDURE RegistrarUsuario
     @Nombre VARCHAR(50),
     @Apellido VARCHAR(50),
     @Email VARCHAR(100),
-    @Contrasena VARCHAR(50)
+    @Contrasena VARCHAR(50),
+    @FechaRegistro DATETIME
 AS
 BEGIN
     IF NOT EXISTS (SELECT * FROM Usuarios WHERE Email = @Email)
     BEGIN
-        INSERT INTO Usuarios (Nombre, Apellido, Email, Contrasena)
-        VALUES (@Nombre, @Apellido, @Email, @Contrasena)
+        INSERT INTO Usuarios (Nombre, Apellido, Email, Contrasena, FechaRegistro)
+        VALUES (@Nombre, @Apellido, @Email, @Contrasena, @FechaRegistro)
     END
 END
 GO
 
-CREATE OR ALTER PROCEDURE IniciarSesion
+CREATE PROCEDURE IniciarSesion
     @Email VARCHAR(100),
     @Contrasena VARCHAR(50)
 AS
