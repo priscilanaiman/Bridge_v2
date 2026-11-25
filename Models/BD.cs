@@ -40,17 +40,17 @@ public class BD
 
     public int CrearGrupo(int idUsuario, string nombre, string apellido, DateTime fechaNacimiento, string? condicionSalud, string rol)
     {
-        int idAdultoMayor = 0;
+        int idGrupo = 0;
         using (SqlConnection connection = new SqlConnection(_connectionString))
         {
             string storedProcedure = "CrearGrupo";
-            idAdultoMayor = connection.QueryFirstOrDefault<int>(
+            idGrupo = connection.QueryFirstOrDefault<int>(
                 storedProcedure,
                 new { IdUsuario = idUsuario, Nombre = nombre, Apellido = apellido, FechaNacimiento = fechaNacimiento, CondicionSalud = condicionSalud, Rol = rol },
                 commandType: CommandType.StoredProcedure
             );
         }
-        return idAdultoMayor;
+        return idGrupo;
     }
 
     public List<Grupo> ObtenerMisGrupos(int idUsuario)
@@ -68,7 +68,7 @@ public class BD
         return grupos;
     }
 
-    public Grupo? ObtenerGrupo(int idAdultoMayor, int idUsuario)
+    public Grupo? ObtenerGrupo(int idGrupo, int idUsuario)
     {
         Grupo? grupo = null;
         using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -76,14 +76,14 @@ public class BD
             string storedProcedure = "ObtenerGrupo";
             grupo = connection.QueryFirstOrDefault<Grupo>(
                 storedProcedure,
-                new { IdAdultoMayor = idAdultoMayor, IdUsuario = idUsuario },
+                new { IdGrupo = idGrupo, IdUsuario = idUsuario },
                 commandType: CommandType.StoredProcedure
             );
         }
         return grupo;
     }
 
-    public List<Miembro> ObtenerMiembrosDelGrupo(int idAdultoMayor)
+    public List<Miembro> ObtenerMiembrosDelGrupo(int idGrupo)
     {
         List<Miembro> miembros = new List<Miembro>();
         using (SqlConnection connection = new SqlConnection(_connectionString))
@@ -91,7 +91,7 @@ public class BD
             string storedProcedure = "ObtenerMiembrosDelGrupo";
             miembros = connection.Query<Miembro>(
                 storedProcedure,
-                new { IdAdultoMayor = idAdultoMayor },
+                new { IdGrupo = idGrupo },
                 commandType: CommandType.StoredProcedure
             ).ToList();
         }

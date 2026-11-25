@@ -23,11 +23,17 @@ CREATE TABLE AdultosMayores (
 )
 GO
 
-CREATE TABLE Vinculos (
-    IdVinculo INT IDENTITY(1,1) PRIMARY KEY,
+CREATE TABLE Grupos (
+    IdGrupo INT IDENTITY(1,1) PRIMARY KEY,
     IdAdultoMayor INT NOT NULL REFERENCES AdultosMayores(IdAdultoMayor),
+    IdUsuarioResponsable INT NOT NULL REFERENCES Usuarios(IdUsuario)
+)
+GO
+
+CREATE TABLE Miembros (
+    IdMiembro INT IDENTITY(1,1) PRIMARY KEY,
+    IdGrupo INT NOT NULL REFERENCES Grupos(IdGrupo),
     IdUsuario INT NOT NULL REFERENCES Usuarios(IdUsuario),
-    Rol VARCHAR(20) NOT NULL,
-    EsResponsable BIT NOT NULL
+    Rol VARCHAR(20) NOT NULL
 )
 GO

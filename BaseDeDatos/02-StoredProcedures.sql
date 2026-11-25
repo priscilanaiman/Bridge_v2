@@ -38,16 +38,22 @@ CREATE PROCEDURE CrearGrupo
 AS
 BEGIN
     DECLARE @IdAdultoMayor INT
+    DECLARE @IdGrupo INT
 
     INSERT INTO AdultosMayores (Nombre, Apellido, FechaNacimiento, CondicionSalud)
     VALUES (@Nombre, @Apellido, @FechaNacimiento, @CondicionSalud)
 
     SELECT @IdAdultoMayor = MAX(IdAdultoMayor) FROM AdultosMayores
 
-    INSERT INTO Vinculos (IdAdultoMayor, IdUsuario, Rol, EsResponsable)
-    VALUES (@IdAdultoMayor, @IdUsuario, @Rol, 1)
+    INSERT INTO Grupos (IdAdultoMayor, IdUsuarioResponsable)
+    VALUES (@IdAdultoMayor, @IdUsuario)
 
-    SELECT @IdAdultoMayor
+    SELECT @IdGrupo = MAX(IdGrupo) FROM Grupos
+
+    INSERT INTO Miembros (IdGrupo, IdUsuario, Rol)
+    VALUES (@IdGrupo, @IdUsuario, @Rol)
+
+    SELECT @IdGrupo
 END
 GO
 
@@ -55,34 +61,36 @@ CREATE PROCEDURE ObtenerMisGrupos
     @IdUsuario INT
 AS
 BEGIN
-    SELECT AdultosMayores.IdAdultoMayor, AdultosMayores.Nombre, AdultosMayores.Apellido, AdultosMayores.FechaNacimiento, Vinculos.Rol, Vinculos.EsResponsable
-    FROM Vinculos
-    INNER JOIN AdultosMayores ON Vinculos.IdAdultoMayor = AdultosMayores.IdAdultoMayor
-    WHERE Vinculos.IdUsuario = @IdUsuario
+    SELECT Grupos.IdGrupo, AdultosMayores.Nombre, AdultosMayores.Apellido, AdultosMayores.FechaNacimiento, Miembros.Rol
+    FROM Miembros
+    INNER JOIN Grupos ON Miembros.IdGrupo = Grupos.IdGrupo
+    INNER JOIN AdultosMayores ON Grupos.IdAdultoMayor = AdultosMayores.IdAdultoMayor
+    WHERE Miembros.IdUsuario = @IdUsuario
     ORDER BY AdultosMayores.Nombre
 END
 GO
 
 CREATE PROCEDURE ObtenerGrupo
-    @IdAdultoMayor INT,
+    @IdGrupo INT,
     @IdUsuario INT
 AS
 BEGIN
-    SELECT AdultosMayores.IdAdultoMayor, AdultosMayores.Nombre, AdultosMayores.Apellido, AdultosMayores.FechaNacimiento, AdultosMayores.CondicionSalud, Vinculos.Rol, Vinculos.EsResponsable
-    FROM Vinculos
-    INNER JOIN AdultosMayores ON Vinculos.IdAdultoMayor = AdultosMayores.IdAdultoMayor
-    WHERE Vinculos.IdUsuario = @IdUsuario AND AdultosMayores.IdAdultoMayor = @IdAdultoMayor
+    SELECT Grupos.IdGrupo, Grupos.IdUsuarioResponsable, AdultosMayores.Nombre, AdultosMayores.Apellido, AdultosMayores.FechaNacimiento, AdultosMayores.CondicionSalud, Miembros.Rol
+    FROM Miembros
+    INNER JOIN Grupos ON Miembros.IdGrupo = Grupos.IdGrupo
+    INNER JOIN AdultosMayores ON Grupos.IdAdultoMayor = AdultosMayores.IdAdultoMayor
+    WHERE Miembros.IdUsuario = @IdUsuario AND Grupos.IdGrupo = @IdGrupo
 END
 GO
 
 CREATE PROCEDURE ObtenerMiembrosDelGrupo
-    @IdAdultoMayor INT
+    @IdGrupo INT
 AS
 BEGIN
-    SELECT Usuarios.Nombre, Usuarios.Apellido, Vinculos.Rol, Vinculos.EsResponsable
-    FROM Vinculos
-    INNER JOIN Usuarios ON Vinculos.IdUsuario = Usuarios.IdUsuario
-    WHERE Vinculos.IdAdultoMayor = @IdAdultoMayor
-    ORDER BY Vinculos.EsResponsable DESC, Usuarios.Nombre
+    SELECT Usuarios.Nombre, Usuarios.Apellido, Miembros.Rol
+    FROM Miembros
+    INNER JOIN Usuarios ON Miembros.IdUsuario = Usuarios.IdUsuario
+    WHERE Miembros.IdGrupo = @IdGrupo
+    ORDER BY Usuarios.Nombre
 END
 GO

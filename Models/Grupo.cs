@@ -2,13 +2,13 @@ namespace Bridge.Models;
 
 public class Grupo
 {
-    public int IdAdultoMayor { get; set; }
+    public int IdGrupo { get; set; }
+    public int IdUsuarioResponsable { get; set; }
     public string Nombre { get; set; } = "";
     public string Apellido { get; set; } = "";
     public DateTime FechaNacimiento { get; set; }
     public string? CondicionSalud { get; set; }
     public string Rol { get; set; } = "";
-    public bool EsResponsable { get; set; }
 
     public int Edad
     {
