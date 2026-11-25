@@ -2,156 +2,620 @@
     ViewData["Title"] = "Cuidar es acompañar";
 }
 
-  <header class="lp-nav"><div class="lp-wrap lp-nav-inner">
-    <a class="lp-brand" href='@Url.Action("Index", "Home")' aria-label="Bridge"><img src="~/img/logo.svg" alt="Bridge"><span><span class="brand-name">BRIDGE</span><span class="brand-tag bloque">Conservando la vida</span></span></a>
-    <nav class="lp-links" aria-label="Secciones"><a href="#producto">Producto</a><a href="#asistente">Asistente</a><a href="#pantallas">Pantallas</a><a href="#como-funciona">Cómo funciona</a><a href="#nosotros">Nosotros</a><a href="#planes">Planes</a><a href="#preguntas">Preguntas</a></nav>
-    <div class="row gap-8"><a class="btn ghost sm" href='@Url.Action("Login", "Sesiones")'>Ingresar</a><a class="btn sm" href='@Url.Action("Registrarse", "Sesiones")'>Crear cuenta</a></div>
-  </div></header>
-
-  <section class="lp-hero">
+<header class="lp-nav">
+    <div class="lp-wrap lp-nav-inner">
+        <a class="lp-brand" href='@Url.Action("Index", "Home")' aria-label="Bridge"><img src="~/img/logo.svg" alt="Bridge"><span><span class="brand-name">BRIDGE</span><span class="brand-tag bloque">Conservando la vida</span></span></a>
+        <nav class="lp-links" aria-label="Secciones">
+            <a href="#producto">Producto</a>
+            <a href="#asistente">Asistente</a>
+            <a href="#pantallas">Pantallas</a>
+            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#planes">Planes</a>
+            <a href="#preguntas">Preguntas</a>
+        </nav>
+        <div class="row gap-8">
+            <a class="btn ghost sm" href='@Url.Action("Login", "Sesiones")'>Ingresar</a>
+            <a class="btn sm" href='@Url.Action("Registrarse", "Sesiones")'>Crear cuenta</a>
+        </div>
+    </div>
+</header>
+<section class="lp-hero">
     <div class="lp-wrap lp-hero-grid">
-      <div class="stack gap-22">
-        <div class="eyebrow">Para familias que cuidan a un adulto mayor</div>
-        <h1 class="lp-h1"><span class="thin">Cuidar es</span><span class="bold">acompañar.</span></h1>
-        <p class="lp-lead">Bridge reúne en un solo lugar todo el cuidado de una persona mayor: medicación, turnos, estudios, episodios y el día a día. Y suma a la familia y a quienes cuidan en un mismo chat, con un asistente que registra todo por ustedes.</p>
-        <div class="actions"><a class="btn lg" href='@Url.Action("Registrarse", "Sesiones")'><span class="icono icono-corazon icono-md" aria-hidden="true"></span> Crear cuenta gratis</a><button type="button" class="btn lg ghost">Probar la demo</button></div>
-        <p class="small muted">Gratis para empezar · Sin tarjeta · Pensado en Argentina</p>
-      </div>
-      <div class="lp-hero-visual"><div class="phone" aria-hidden="true"><div class="phone-top"><span class="avatar sm fondo-celeste" aria-hidden="true">RB</span><div class="grow"><strong>Grupo de Rosa</strong><small>Laura, Diego, Sofía, Marta, Graciela y el asistente</small></div></div><div class="phone-body">
-    <div class="msg  "><span class="avatar sm fondo-azul" aria-hidden="true">DF</span><div class="bubble"><div class="who">Diego Fernández<small>10:12</small></div><p>Le tomé la presión: 128/82. Desayunó todo.</p></div></div>
-    <div class="msg  agent"><span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span><div class="bubble"><div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>10:12</small></div><p>Registrado en Signos vitales.</p><div class="msg-card"><div class="row"><span class="icon-badge sm ok"><span class="icono icono-pulso icono-sm" aria-hidden="true"></span></span><div class="grow"><h4>Presión 128/82</h4><p class="small muted">Dentro de los valores habituales</p></div></div></div></div></div>
-    <div class="msg mine "><div class="bubble"><div class="who">Vos<small>18:32</small></div><p>Saqué turno con el cardiólogo para el jueves 19 a las 11</p></div></div>
-    <div class="msg  agent"><span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span><div class="bubble"><div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>18:32</small></div><p>Listo, lo agendé. Ese día Marta está hasta las 16, ¿la acompañás vos?</p><div class="msg-card"><div class="row"><span class="icon-badge sm "><span class="icono icono-calendario icono-sm" aria-hidden="true"></span></span><div class="grow"><h4>Cardiología · control</h4><p class="small muted">Jueves 19 de noviembre · 11:00</p><p class="small muted">Dr. Pablo Méndez · Av. Cabildo 1820</p></div></div></div></div></div></div></div></div>
+        <div class="stack gap-22">
+            <div class="eyebrow">Para familias que cuidan a un adulto mayor</div>
+            <h1 class="lp-h1"><span class="thin">Cuidar es</span><span class="bold">acompañar.</span></h1>
+            <p class="lp-lead">Bridge reúne en un solo lugar todo el cuidado de una persona mayor: medicación, turnos, estudios, episodios y el día a día. Y suma a la familia y a quienes cuidan en un mismo chat, con un asistente que registra todo por ustedes.</p>
+            <div class="actions">
+                <a class="btn lg" href='@Url.Action("Registrarse", "Sesiones")'><span class="icono icono-corazon icono-md" aria-hidden="true"></span> Crear cuenta gratis</a>
+                <button type="button" class="btn lg ghost">Probar la demo</button>
+            </div>
+            <p class="small muted">Gratis para empezar · Sin tarjeta · Pensado en Argentina</p>
+        </div>
+        <div class="lp-hero-visual">
+            <div class="phone" aria-hidden="true">
+                <div class="phone-top">
+                    <span class="avatar sm fondo-celeste" aria-hidden="true">RB</span>
+                    <div class="grow">
+                        <strong>Grupo de Rosa</strong>
+                        <small>Laura, Diego, Sofía, Marta, Graciela y el asistente</small>
+                    </div>
+                </div>
+                <div class="phone-body">
+                    <div class="msg">
+                        <span class="avatar sm fondo-azul" aria-hidden="true">DF</span>
+                        <div class="bubble">
+                            <div class="who">Diego Fernández<small>10:12</small></div>
+                            <p>Le tomé la presión: 128/82. Desayunó todo.</p>
+                        </div>
+                    </div>
+                    <div class="msg agent">
+                        <span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span>
+                        <div class="bubble">
+                            <div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>10:12</small></div>
+                            <p>Registrado en Signos vitales.</p>
+                            <div class="msg-card">
+                                <div class="row">
+                                    <span class="icon-badge sm ok"><span class="icono icono-pulso icono-sm" aria-hidden="true"></span></span>
+                                    <div class="grow">
+                                        <h4>Presión 128/82</h4>
+                                        <p class="small muted">Dentro de los valores habituales</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg mine">
+                        <div class="bubble">
+                            <div class="who">Vos<small>18:32</small></div>
+                            <p>Saqué turno con el cardiólogo para el jueves 19 a las 11</p>
+                        </div>
+                    </div>
+                    <div class="msg agent">
+                        <span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span>
+                        <div class="bubble">
+                            <div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>18:32</small></div>
+                            <p>Listo, lo agendé. Ese día Marta está hasta las 16, ¿la acompañás vos?</p>
+                            <div class="msg-card">
+                                <div class="row">
+                                    <span class="icon-badge sm"><span class="icono icono-calendario icono-sm" aria-hidden="true"></span></span>
+                                    <div class="grow">
+                                        <h4>Cardiología · control</h4>
+                                        <p class="small muted">Jueves 19 de noviembre · 11:00</p>
+                                        <p class="small muted">Dr. Pablo Méndez · Av. Cabildo 1820</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="hero-wave"></div>
-  </section>
-
-  <section class="lp-section">
+</section>
+<section class="lp-section">
     <div class="lp-wrap stack gap-28">
-      <h2 class="lp-h2"><span class="thin">Cuando cuidan varios,</span> <span class="bold">la información se pierde.</span></h2>
-      <p class="lp-lead">Queda repartida entre grupos de WhatsApp, papeles en la heladera y la memoria de cada uno. Y siempre aparecen las mismas preguntas:</p>
-      <div class="pain-grid"><blockquote class="pain">¿Alguien le dio la pastilla de las 18?</blockquote><blockquote class="pain">¿Cuándo fue la última vez que se mareó?</blockquote><blockquote class="pain">¿Quién tiene la orden del estudio?</blockquote></div>
+        <h2 class="lp-h2"><span class="thin">Cuando cuidan varios,</span> <span class="bold">la información se pierde.</span></h2>
+        <p class="lp-lead">Queda repartida entre grupos de WhatsApp, papeles en la heladera y la memoria de cada uno. Y siempre aparecen las mismas preguntas:</p>
+        <div class="pain-grid">
+            <blockquote class="pain">¿Alguien le dio la pastilla de las 18?</blockquote>
+            <blockquote class="pain">¿Cuándo fue la última vez que se mareó?</blockquote>
+            <blockquote class="pain">¿Quién tiene la orden del estudio?</blockquote>
+        </div>
     </div>
-  </section>
-
-  <section class="lp-section lp-soft" id="producto">
+</section>
+<section class="lp-section lp-soft" id="producto">
     <div class="lp-wrap stack gap-28">
-      <div><div class="eyebrow">Producto</div><h2 class="lp-h2"><span class="thin">Todo el cuidado,</span> <span class="bold">en un solo lugar.</span></h2></div>
-      <div class="feature-grid"><article class="feature"><span class="icon-badge"><span class="icono icono-chat" aria-hidden="true"></span></span><h3>Chat del grupo</h3><p class="small muted">Toda la familia y quienes cuidan, en una sola conversación. Nadie se pierde nada.</p></article><article class="feature"><span class="icon-badge"><span class="icono icono-calendario" aria-hidden="true"></span></span><h3>Agenda médica</h3><p class="small muted">Turnos, estudios y recordatorios, con quién acompaña a cada uno.</p></article><article class="feature"><span class="icon-badge"><span class="icono icono-pastilla" aria-hidden="true"></span></span><h3>Medicación y avisos</h3><p class="small muted">Avisos de cada toma. Si nadie la registra, el aviso escala a otra persona.</p></article><article class="feature"><span class="icon-badge"><span class="icono icono-pulso" aria-hidden="true"></span></span><h3>Salud y episodios</h3><p class="small muted">Caídas, mareos y signos vitales con fecha, hora y gráficos.</p></article><article class="feature"><span class="icon-badge"><span class="icono icono-archivo" aria-hidden="true"></span></span><h3>Estudios y recetas</h3><p class="small muted">Sacale una foto y queda guardado, con un resumen fácil de entender.</p></article><article class="feature"><span class="icon-badge"><span class="icono icono-rompecabezas" aria-hidden="true"></span></span><h3>Estimulación cognitiva</h3><p class="small muted">Juegos y actividades pensados para su cuadro, con métricas de evolución.</p></article><article class="feature"><span class="icon-badge"><span class="icono icono-reloj" aria-hidden="true"></span></span><h3>Turnos y gastos</h3><p class="small muted">Quién cuida cada día, traspasos de novedades y gastos compartidos.</p></article><article class="feature"><span class="icon-badge"><span class="icono icono-escudo" aria-hidden="true"></span></span><h3>Ficha de emergencia</h3><p class="small muted">Datos críticos y un QR para que cualquier médico los vea al instante.</p></article></div>
+        <div>
+            <div class="eyebrow">Producto</div>
+            <h2 class="lp-h2"><span class="thin">Todo el cuidado,</span> <span class="bold">en un solo lugar.</span></h2>
+        </div>
+        <div class="feature-grid">
+            <article class="feature">
+                <span class="icon-badge"><span class="icono icono-chat" aria-hidden="true"></span></span>
+                <h3>Chat del grupo</h3>
+                <p class="small muted">Toda la familia y quienes cuidan, en una sola conversación. Nadie se pierde nada.</p>
+            </article>
+            <article class="feature">
+                <span class="icon-badge"><span class="icono icono-calendario" aria-hidden="true"></span></span>
+                <h3>Agenda médica</h3>
+                <p class="small muted">Turnos, estudios y recordatorios, con quién acompaña a cada uno.</p>
+            </article>
+            <article class="feature">
+                <span class="icon-badge"><span class="icono icono-pastilla" aria-hidden="true"></span></span>
+                <h3>Medicación y avisos</h3>
+                <p class="small muted">Avisos de cada toma. Si nadie la registra, el aviso escala a otra persona.</p>
+            </article>
+            <article class="feature">
+                <span class="icon-badge"><span class="icono icono-pulso" aria-hidden="true"></span></span>
+                <h3>Salud y episodios</h3>
+                <p class="small muted">Caídas, mareos y signos vitales con fecha, hora y gráficos.</p>
+            </article>
+            <article class="feature">
+                <span class="icon-badge"><span class="icono icono-archivo" aria-hidden="true"></span></span>
+                <h3>Estudios y recetas</h3>
+                <p class="small muted">Sacale una foto y queda guardado, con un resumen fácil de entender.</p>
+            </article>
+            <article class="feature">
+                <span class="icon-badge"><span class="icono icono-rompecabezas" aria-hidden="true"></span></span>
+                <h3>Estimulación cognitiva</h3>
+                <p class="small muted">Juegos y actividades pensados para su cuadro, con métricas de evolución.</p>
+            </article>
+            <article class="feature">
+                <span class="icon-badge"><span class="icono icono-reloj" aria-hidden="true"></span></span>
+                <h3>Turnos y gastos</h3>
+                <p class="small muted">Quién cuida cada día, traspasos de novedades y gastos compartidos.</p>
+            </article>
+            <article class="feature">
+                <span class="icon-badge"><span class="icono icono-escudo" aria-hidden="true"></span></span>
+                <h3>Ficha de emergencia</h3>
+                <p class="small muted">Datos críticos y un QR para que cualquier médico los vea al instante.</p>
+            </article>
+        </div>
     </div>
-  </section>
-
-  <section class="lp-section" id="asistente">
+</section>
+<section class="lp-section" id="asistente">
     <div class="lp-wrap lp-split">
-      <div class="stack gap-20">
-        <div class="eyebrow"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span> Asistente con IA</div>
-        <h2 class="lp-h2"><span class="thin">Contalo en el chat.</span> <span class="bold">El asistente se ocupa del resto.</span></h2>
-        <p class="lp-lead">No hace falta aprender pantallas ni completar formularios. Escribí como le escribirías a tu familia y el asistente lo convierte en información ordenada.</p>
-        <ul class="lp-checks">
-          <li><span class="icono icono-calendario" aria-hidden="true"></span><div><strong>Agenda lo que se menciona.</strong><span>«Saqué turno con el cardiólogo el jueves» queda en la agenda, con dirección y acompañante.</span></div></li>
-          <li><span class="icono icono-pulso" aria-hidden="true"></span><div><strong>Registra sin formularios.</strong><span>Tomas, presión, episodios y tickets: con un mensaje o una foto.</span></div></li>
-          <li><span class="icono icono-chat" aria-hidden="true"></span><div><strong>Responde con toda la historia.</strong><span>«¿Cuándo se cayó?», «¿qué toma a la noche?»: la respuesta está en segundos.</span></div></li>
-          <li><span class="icono icono-campana" aria-hidden="true"></span><div><strong>Avisa y se anticipa.</strong><span>Recuerda pedir recetas, detecta cambios y prepara preguntas para el médico.</span></div></li>
-        </ul>
-      </div>
-      <div class="lp-hero-visual"><div class="phone" aria-hidden="true"><div class="phone-top"><span class="avatar sm fondo-celeste" aria-hidden="true">RB</span><div class="grow"><strong>Grupo de Rosa</strong><small>Laura, Diego, Sofía, Marta, Graciela y el asistente</small></div></div><div class="phone-body">
-    <div class="msg mine "><div class="bubble"><div class="who">Vos<small>19:05</small></div><p>¿Cuándo fue que se cayó en la cocina?</p></div></div>
-    <div class="msg  agent"><span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span><div class="bubble"><div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>19:05</small></div><p>Fue el miércoles 28 de octubre a las 18:40. Lo registró Marta. El Dr. Ibarra descartó fractura.</p><div class="msg-card"><div class="row"><span class="icon-badge sm warn"><span class="icono icono-alerta icono-sm" aria-hidden="true"></span></span><div class="grow"><h4>Caída · moderado</h4><p class="small muted">Golpe en la cadera izquierda, sin pérdida de conocimiento</p></div></div></div></div></div>
-    <div class="msg  "><span class="avatar sm fondo-verde" aria-hidden="true">MR</span><div class="bubble"><div class="who">Marta Ruiz<small>19:20</small></div><p>Les dejo el ticket de la farmacia</p><div class="mock-photo"><span class="icono icono-ticket icono-xl" aria-hidden="true"></span><span>ticket-farmacia.jpg</span></div></div></div>
-    <div class="msg  agent"><span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span><div class="bubble"><div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>19:20</small></div><p>Lo cargué en Gastos y quedó pendiente de reintegro.</p><div class="msg-card"><div class="row"><span class="icon-badge sm "><span class="icono icono-ticket icono-sm" aria-hidden="true"></span></span><div class="grow"><h4>$38.450 · Farmacia</h4><p class="small muted">Pagó Marta · 14 nov</p></div></div></div></div></div>
-    <div class="msg  agent"><span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span><div class="bubble"><div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>19:30</small></div><p>La Levodopa alcanza hasta el 26/11. ¿Le pido la receta a la Dra. Romero en el turno del viernes?</p><div class="actions"><span class="btn sm">Sí, pedila</span><span class="btn sm secondary">Más tarde</span></div></div></div></div></div></div>
+        <div class="stack gap-20">
+            <div class="eyebrow"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span> Asistente con IA</div>
+            <h2 class="lp-h2"><span class="thin">Contalo en el chat.</span> <span class="bold">El asistente se ocupa del resto.</span></h2>
+            <p class="lp-lead">No hace falta aprender pantallas ni completar formularios. Escribí como le escribirías a tu familia y el asistente lo convierte en información ordenada.</p>
+            <ul class="lp-checks">
+                <li>
+                    <span class="icono icono-calendario" aria-hidden="true"></span>
+                    <div>
+                        <strong>Agenda lo que se menciona.</strong>
+                        <span>«Saqué turno con el cardiólogo el jueves» queda en la agenda, con dirección y acompañante.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="icono icono-pulso" aria-hidden="true"></span>
+                    <div>
+                        <strong>Registra sin formularios.</strong>
+                        <span>Tomas, presión, episodios y tickets: con un mensaje o una foto.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="icono icono-chat" aria-hidden="true"></span>
+                    <div>
+                        <strong>Responde con toda la historia.</strong>
+                        <span>«¿Cuándo se cayó?», «¿qué toma a la noche?»: la respuesta está en segundos.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="icono icono-campana" aria-hidden="true"></span>
+                    <div>
+                        <strong>Avisa y se anticipa.</strong>
+                        <span>Recuerda pedir recetas, detecta cambios y prepara preguntas para el médico.</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="lp-hero-visual">
+            <div class="phone" aria-hidden="true">
+                <div class="phone-top">
+                    <span class="avatar sm fondo-celeste" aria-hidden="true">RB</span>
+                    <div class="grow">
+                        <strong>Grupo de Rosa</strong>
+                        <small>Laura, Diego, Sofía, Marta, Graciela y el asistente</small>
+                    </div>
+                </div>
+                <div class="phone-body">
+                    <div class="msg mine">
+                        <div class="bubble">
+                            <div class="who">Vos<small>19:05</small></div>
+                            <p>¿Cuándo fue que se cayó en la cocina?</p>
+                        </div>
+                    </div>
+                    <div class="msg agent">
+                        <span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span>
+                        <div class="bubble">
+                            <div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>19:05</small></div>
+                            <p>Fue el miércoles 28 de octubre a las 18:40. Lo registró Marta. El Dr. Ibarra descartó fractura.</p>
+                            <div class="msg-card">
+                                <div class="row">
+                                    <span class="icon-badge sm warn"><span class="icono icono-alerta icono-sm" aria-hidden="true"></span></span>
+                                    <div class="grow">
+                                        <h4>Caída · moderado</h4>
+                                        <p class="small muted">Golpe en la cadera izquierda, sin pérdida de conocimiento</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg">
+                        <span class="avatar sm fondo-verde" aria-hidden="true">MR</span>
+                        <div class="bubble">
+                            <div class="who">Marta Ruiz<small>19:20</small></div>
+                            <p>Les dejo el ticket de la farmacia</p>
+                            <div class="mock-photo">
+                                <span class="icono icono-ticket icono-xl" aria-hidden="true"></span>
+                                <span>ticket-farmacia.jpg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg agent">
+                        <span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span>
+                        <div class="bubble">
+                            <div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>19:20</small></div>
+                            <p>Lo cargué en Gastos y quedó pendiente de reintegro.</p>
+                            <div class="msg-card">
+                                <div class="row">
+                                    <span class="icon-badge sm"><span class="icono icono-ticket icono-sm" aria-hidden="true"></span></span>
+                                    <div class="grow">
+                                        <h4>$38.450 · Farmacia</h4>
+                                        <p class="small muted">Pagó Marta · 14 nov</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="msg agent">
+                        <span class="avatar agent sm" aria-hidden="true"><span class="icono icono-chispa icono-xs" aria-hidden="true"></span></span>
+                        <div class="bubble">
+                            <div class="who">Asistente Bridge <span class="ai-tag">IA</span><small>19:30</small></div>
+                            <p>La Levodopa alcanza hasta el 26/11. ¿Le pido la receta a la Dra. Romero en el turno del viernes?</p>
+                            <div class="actions">
+                                <span class="btn sm">Sí, pedila</span>
+                                <span class="btn sm secondary">Más tarde</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-
-  <section class="lp-section lp-soft" id="pantallas">
+</section>
+<section class="lp-section lp-soft" id="pantallas">
     <div class="lp-wrap stack gap-28">
-      <div><div class="eyebrow">Así se ve</div><h2 class="lp-h2"><span class="thin">Claro para todos,</span> <span class="bold">incluso en el celular.</span></h2></div>
-      <div class="screens-grid">
-    <figure class="screen"><div class="screen-bar"><i></i><i></i><i></i><span>Medicación y avisos</span></div><div class="screen-body">
-      <div class="list"><div class="list-item"><span class="time">08:00</span><span class="status-ic taken"><span class="icono icono-check icono-sm" aria-hidden="true"></span></span><div class="grow"><p class="strong">Levodopa + Carbidopa</p><p class="small muted">Tomada 08:10 · Diego</p></div></div><div class="list-item"><span class="time">08:00</span><span class="status-ic taken"><span class="icono icono-check icono-sm" aria-hidden="true"></span></span><div class="grow"><p class="strong">Enalapril</p><p class="small muted">Tomada 08:10 · Diego</p></div></div><div class="list-item"><span class="time">18:00</span><span class="status-ic missed"><span class="icono icono-alerta icono-sm" aria-hidden="true"></span></span><div class="grow"><p class="strong">Levodopa + Carbidopa</p><p class="small muted">Sin registrar · aviso escalado a Laura</p></div></div><div class="list-item"><span class="time">21:00</span><span class="status-ic pending"><span class="icono icono-reloj icono-sm" aria-hidden="true"></span></span><div class="grow"><p class="strong">Donepecilo</p><p class="small muted">Pendiente</p></div></div></div></div></figure>
-    <figure class="screen"><div class="screen-bar"><i></i><i></i><i></i><span>Evolución de la estimulación</span></div><div class="screen-body">
-      <p class="small muted">% de aciertos por semana</p>
-      <img class="chart" src="~/img/maqueta-grafico.svg" alt="Gráfico en porcentaje">
-      <div class="legend"><span><i class="dot fondo-verde-agua"></i>Memoria de pares</span><span><i class="dot fondo-verde-claro"></i>Secuencias</span></div></div></figure>
-    <figure class="screen"><div class="screen-bar"><i></i><i></i><i></i><span>Ficha de emergencia</span></div><div class="screen-body">
-      <div class="row alinear-arriba"><div class="grow stack gap-8"><p class="strong texto-grande">Rosa Benítez · 82 años</p><span class="chip crit ajustado-al-inicio"><span class="icono icono-alerta icono-xs" aria-hidden="true"></span> Alergia a la penicilina</span><p class="small muted">Grupo 0+ · PAMI · Levodopa, Donepecilo, Enalapril</p><p class="small muted">Contacto: Laura · 11 5555-0170</p></div><img class="qr qr-chico" src="~/img/maqueta-qr.svg" alt="Código QR de la ficha de emergencia"></div></div></figure>
-    <figure class="screen"><div class="screen-bar"><i></i><i></i><i></i><span>Gastos compartidos</span></div><div class="screen-body">
-      <div class="row"><div class="stat grow"><small>Pendiente de reintegro</small><b class="texto-alerta">$63.350</b></div><div class="stat grow"><small>Saldo entre hermanos</small><b>$68.200</b><small>Diego le debe a Laura</small></div></div>
-      <div class="list"><div class="list-item"><span class="icon-badge soft sm"><span class="icono icono-ticket icono-sm" aria-hidden="true"></span></span><div class="grow"><p class="strong">Farmacia del barrio</p><p class="small muted">14 nov · pagó Marta</p></div><span class="chip warn">$38.450</span></div><div class="list-item"><span class="icon-badge soft sm"><span class="icono icono-ticket icono-sm" aria-hidden="true"></span></span><div class="grow"><p class="strong">Pañales y apósitos</p><p class="small muted">12 nov · pagó Marta</p></div><span class="chip warn">$24.900</span></div></div></div></figure></div>
+        <div>
+            <div class="eyebrow">Así se ve</div>
+            <h2 class="lp-h2"><span class="thin">Claro para todos,</span> <span class="bold">incluso en el celular.</span></h2>
+        </div>
+        <div class="screens-grid">
+            <figure class="screen">
+                <div class="screen-bar">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <span>Medicación y avisos</span>
+                </div>
+                <div class="screen-body">
+                    <div class="list">
+                        <div class="list-item">
+                            <span class="time">08:00</span>
+                            <span class="status-ic taken"><span class="icono icono-check icono-sm" aria-hidden="true"></span></span>
+                            <div class="grow">
+                                <p class="strong">Levodopa + Carbidopa</p>
+                                <p class="small muted">Tomada 08:10 · Diego</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <span class="time">08:00</span>
+                            <span class="status-ic taken"><span class="icono icono-check icono-sm" aria-hidden="true"></span></span>
+                            <div class="grow">
+                                <p class="strong">Enalapril</p>
+                                <p class="small muted">Tomada 08:10 · Diego</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <span class="time">18:00</span>
+                            <span class="status-ic missed"><span class="icono icono-alerta icono-sm" aria-hidden="true"></span></span>
+                            <div class="grow">
+                                <p class="strong">Levodopa + Carbidopa</p>
+                                <p class="small muted">Sin registrar · aviso escalado a Laura</p>
+                            </div>
+                        </div>
+                        <div class="list-item">
+                            <span class="time">21:00</span>
+                            <span class="status-ic pending"><span class="icono icono-reloj icono-sm" aria-hidden="true"></span></span>
+                            <div class="grow">
+                                <p class="strong">Donepecilo</p>
+                                <p class="small muted">Pendiente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+            <figure class="screen">
+                <div class="screen-bar">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <span>Evolución de la estimulación</span>
+                </div>
+                <div class="screen-body">
+                    <p class="small muted">% de aciertos por semana</p>
+                    <img class="chart" src="~/img/maqueta-grafico.svg" alt="Gráfico en porcentaje">
+                    <div class="legend">
+                        <span><i class="dot fondo-verde-agua"></i>Memoria de pares</span>
+                        <span><i class="dot fondo-verde-claro"></i>Secuencias</span>
+                    </div>
+                </div>
+            </figure>
+            <figure class="screen">
+                <div class="screen-bar">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <span>Ficha de emergencia</span>
+                </div>
+                <div class="screen-body">
+                    <div class="row alinear-arriba">
+                        <div class="grow stack gap-8">
+                            <p class="strong texto-grande">Rosa Benítez · 82 años</p>
+                            <span class="chip crit ajustado-al-inicio"><span class="icono icono-alerta icono-xs" aria-hidden="true"></span> Alergia a la penicilina</span>
+                            <p class="small muted">Grupo 0+ · PAMI · Levodopa, Donepecilo, Enalapril</p>
+                            <p class="small muted">Contacto: Laura · 11 5555-0170</p>
+                        </div>
+                        <img class="qr qr-chico" src="~/img/maqueta-qr.svg" alt="Código QR de la ficha de emergencia">
+                    </div>
+                </div>
+            </figure>
+            <figure class="screen">
+                <div class="screen-bar">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <span>Gastos compartidos</span>
+                </div>
+                <div class="screen-body">
+                    <div class="row">
+                        <div class="stat grow">
+                            <small>Pendiente de reintegro</small>
+                            <b class="texto-alerta">$63.350</b>
+                        </div>
+                        <div class="stat grow">
+                            <small>Saldo entre hermanos</small>
+                            <b>$68.200</b>
+                            <small>Diego le debe a Laura</small>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list-item">
+                            <span class="icon-badge soft sm"><span class="icono icono-ticket icono-sm" aria-hidden="true"></span></span>
+                            <div class="grow">
+                                <p class="strong">Farmacia del barrio</p>
+                                <p class="small muted">14 nov · pagó Marta</p>
+                            </div>
+                            <span class="chip warn">$38.450</span>
+                        </div>
+                        <div class="list-item">
+                            <span class="icon-badge soft sm"><span class="icono icono-ticket icono-sm" aria-hidden="true"></span></span>
+                            <div class="grow">
+                                <p class="strong">Pañales y apósitos</p>
+                                <p class="small muted">12 nov · pagó Marta</p>
+                            </div>
+                            <span class="chip warn">$24.900</span>
+                        </div>
+                    </div>
+                </div>
+            </figure>
+        </div>
     </div>
-  </section>
-
-  <section class="lp-section" id="como-funciona">
+</section>
+<section class="lp-section" id="como-funciona">
     <div class="lp-wrap stack gap-28">
-      <div><div class="eyebrow">Cómo funciona</div><h2 class="lp-h2"><span class="thin">Empezás en</span> <span class="bold">cinco minutos.</span></h2></div>
-      <ol class="how"><li><b>1</b><h3>Creá el grupo de cuidado</h3><p class="muted">Cargá los datos de la persona mayor: diagnósticos, alergias, medicación y qué controlar.</p></li><li><b>2</b><h3>Sumá a quienes acompañan</h3><p class="muted">Invitá a la familia, a las cuidadoras y, si querés, a sus médicos. Cada uno con su rol.</p></li><li><b>3</b><h3>Contá lo que pasa en el chat</h3><p class="muted">El asistente registra, agenda y avisa. Todos ven lo mismo, en el momento.</p></li></ol>
+        <div>
+            <div class="eyebrow">Cómo funciona</div>
+            <h2 class="lp-h2"><span class="thin">Empezás en</span> <span class="bold">cinco minutos.</span></h2>
+        </div>
+        <ol class="how">
+            <li>
+                <b>1</b>
+                <h3>Creá el grupo de cuidado</h3>
+                <p class="muted">Cargá los datos de la persona mayor: diagnósticos, alergias, medicación y qué controlar.</p>
+            </li>
+            <li>
+                <b>2</b>
+                <h3>Sumá a quienes acompañan</h3>
+                <p class="muted">Invitá a la familia, a las cuidadoras y, si querés, a sus médicos. Cada uno con su rol.</p>
+            </li>
+            <li>
+                <b>3</b>
+                <h3>Contá lo que pasa en el chat</h3>
+                <p class="muted">El asistente registra, agenda y avisa. Todos ven lo mismo, en el momento.</p>
+            </li>
+        </ol>
     </div>
-  </section>
-
-  <section class="lp-section manifesto" id="nosotros">
+</section>
+<section class="lp-section manifesto" id="nosotros">
     <div class="lp-wrap lp-split">
-      <div class="stack gap-16">
-        <h2 class="manifesto-title">Manifiesto</h2>
-        <p>En <strong>Bridge</strong> creemos que toda persona merece envejecer con dignidad, respeto y el <strong>acompañamiento</strong> que necesita.</p>
-        <p>Nuestro propósito es <strong>apoyar a los adultos mayores con deterioro cognitivo</strong> y a quienes los cuidan, con herramientas que faciliten la organización diaria, el acceso a profesionales y el acompañamiento familiar.</p>
-        <p>Creemos en una tecnología accesible, sencilla y humana, diseñada para fortalecer los vínculos y <strong>brindar tranquilidad</strong>.</p>
-        <p class="manifesto-close">Porque <strong>cuidar es acompañar</strong>. Y una sociedad que cuida a sus adultos mayores también cuida su propio futuro.</p>
-      </div>
-      <div class="values-grid"><div class="value"><span class="icon-badge white"><span class="icono icono-escudo" aria-hidden="true"></span></span><div><h3>Confianza</h3><p>Cuidamos la información de cada familia como si fuera la nuestra.</p></div></div><div class="value"><span class="icon-badge white"><span class="icono icono-personas" aria-hidden="true"></span></span><div><h3>Acompañamiento</h3><p>Nadie debería cuidar en soledad. Bridge conecta a todos los que ayudan.</p></div></div><div class="value"><span class="icon-badge white"><span class="icono icono-corazon" aria-hidden="true"></span></span><div><h3>Empatía</h3><p>Diseñamos pensando en quien cuida y en quien es cuidado.</p></div></div><div class="value"><span class="icon-badge white"><span class="icono icono-hoja" aria-hidden="true"></span></span><div><h3>Bienestar</h3><p>Promovemos rutinas, estímulo y tranquilidad para toda la familia.</p></div></div><div class="value"><span class="icon-badge white"><span class="icono icono-pulso" aria-hidden="true"></span></span><div><h3>Salud</h3><p>Información ordenada para decisiones médicas mejores y a tiempo.</p></div></div><div class="value"><span class="icon-badge white"><span class="icono icono-mano" aria-hidden="true"></span></span><div><h3>Apoyo</h3><p>Una tecnología accesible, sencilla y humana, que fortalece los vínculos.</p></div></div></div>
+        <div class="stack gap-16">
+            <h2 class="manifesto-title">Manifiesto</h2>
+            <p>En <strong>Bridge</strong> creemos que toda persona merece envejecer con dignidad, respeto y el <strong>acompañamiento</strong> que necesita.</p>
+            <p>Nuestro propósito es <strong>apoyar a los adultos mayores con deterioro cognitivo</strong> y a quienes los cuidan, con herramientas que faciliten la organización diaria, el acceso a profesionales y el acompañamiento familiar.</p>
+            <p>Creemos en una tecnología accesible, sencilla y humana, diseñada para fortalecer los vínculos y <strong>brindar tranquilidad</strong>.</p>
+            <p class="manifesto-close">Porque <strong>cuidar es acompañar</strong>. Y una sociedad que cuida a sus adultos mayores también cuida su propio futuro.</p>
+        </div>
+        <div class="values-grid">
+            <div class="value">
+                <span class="icon-badge white"><span class="icono icono-escudo" aria-hidden="true"></span></span>
+                <div>
+                    <h3>Confianza</h3>
+                    <p>Cuidamos la información de cada familia como si fuera la nuestra.</p>
+                </div>
+            </div>
+            <div class="value">
+                <span class="icon-badge white"><span class="icono icono-personas" aria-hidden="true"></span></span>
+                <div>
+                    <h3>Acompañamiento</h3>
+                    <p>Nadie debería cuidar en soledad. Bridge conecta a todos los que ayudan.</p>
+                </div>
+            </div>
+            <div class="value">
+                <span class="icon-badge white"><span class="icono icono-corazon" aria-hidden="true"></span></span>
+                <div>
+                    <h3>Empatía</h3>
+                    <p>Diseñamos pensando en quien cuida y en quien es cuidado.</p>
+                </div>
+            </div>
+            <div class="value">
+                <span class="icon-badge white"><span class="icono icono-hoja" aria-hidden="true"></span></span>
+                <div>
+                    <h3>Bienestar</h3>
+                    <p>Promovemos rutinas, estímulo y tranquilidad para toda la familia.</p>
+                </div>
+            </div>
+            <div class="value">
+                <span class="icon-badge white"><span class="icono icono-pulso" aria-hidden="true"></span></span>
+                <div>
+                    <h3>Salud</h3>
+                    <p>Información ordenada para decisiones médicas mejores y a tiempo.</p>
+                </div>
+            </div>
+            <div class="value">
+                <span class="icon-badge white"><span class="icono icono-mano" aria-hidden="true"></span></span>
+                <div>
+                    <h3>Apoyo</h3>
+                    <p>Una tecnología accesible, sencilla y humana, que fortalece los vínculos.</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-
-  <section class="lp-section" id="planes">
+</section>
+<section class="lp-section" id="planes">
     <div class="lp-wrap stack gap-28">
-      <div class="row wrap separados alinear-abajo">
-        <div><div class="eyebrow">Planes</div><h2 class="lp-h2"><span class="thin">Un plan para</span> <span class="bold">cada familia.</span></h2></div>
-        <div class="tabs" role="tablist" aria-label="Forma de pago"><button type="button" class="tab" role="tab" aria-selected="true">Mensual</button><button type="button" class="tab" role="tab" aria-selected="false">Anual · 2 meses gratis</button></div>
-      </div>
-      <div class="plans"><article class="plan ">
-
-    <div><h3>Gratis</h3><p class="muted small">Para empezar a organizarte</p></div>
-    <div class="plan-price"><b>$0</b><span>para siempre</span></div>
-    <p class="small muted pegado-arriba">Sin tarjeta</p>
-    <a class="btn secondary" href='@Url.Action("Registrarse", "Sesiones")'>Empezar gratis</a>
-    <ul class="plan-features"><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Un adulto mayor</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Vos y un acompañante, de la familia o cuidadora</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Chat del grupo</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Agenda y recordatorios</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Medicación con avisos</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Episodios y signos vitales</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Ficha de emergencia con QR</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Hasta 30 documentos</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Juegos de estimulación</span></li><li class="off"><span class="icono icono-cerrar icono-sm" aria-hidden="true"></span><span>Asistente con IA</span></li></ul>
-  </article><article class="plan featured">
-    <span class="plan-badge">El más elegido</span>
-    <div><h3>Familia</h3><p class="muted small">Para cuidar entre varios</p></div>
-    <div class="plan-price"><b>$9.900</b><span>por mes</span></div>
-    <p class="small muted pegado-arriba">14 días gratis, sin tarjeta</p>
-    <a class="btn" href='@Url.Action("Registrarse", "Sesiones")'>Probar 14 días gratis</a>
-    <ul class="plan-features"><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Hasta 2 adultos mayores</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Vos y hasta 4 personas más, de la familia o cuidadoras</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Chat del grupo con asistente IA</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Agendá, registrá y preguntá desde el chat</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Resumen automático de estudios y recetas</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Actividades de estimulación personalizadas</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Informe para el médico</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Turnos, traspasos y gastos compartidos</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Documentos ilimitados</span></li></ul>
-  </article><article class="plan ">
-
-    <div><h3>Red de cuidado</h3><p class="muted small">Para redes de cuidado grandes</p></div>
-    <div class="plan-price"><b>$19.900</b><span>por mes</span></div>
-    <p class="small muted pegado-arriba">Cancelás cuando quieras</p>
-    <a class="btn secondary" href='@Url.Action("Registrarse", "Sesiones")'>Elegir Red de cuidado</a>
-    <ul class="plan-features"><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Todo lo del plan Familia</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Hasta 5 adultos mayores</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Personas ilimitadas en cada grupo</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Más de un responsable por grupo</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Profesionales invitados con acceso al informe</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Avisos por WhatsApp</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Tensiómetro y glucómetro conectados</span></li><li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Atención prioritaria</span></li></ul>
-  </article></div>
-      <div class="institutions"><span class="icon-badge"><span class="icono icono-personas" aria-hidden="true"></span></span><div class="grow"><h3>Residencias, centros de día y empresas de cuidadores</h3><p class="small muted">Muchos residentes, equipos por turno, reportes para las familias y facturación por institución.</p></div><button type="button" class="btn secondary">Hablar con nosotros</button></div>
-      <p class="small muted">Precios de referencia en pesos argentinos, con IVA incluido.</p>
+        <div class="row wrap separados alinear-abajo">
+            <div>
+                <div class="eyebrow">Planes</div>
+                <h2 class="lp-h2"><span class="thin">Un plan para</span> <span class="bold">cada familia.</span></h2>
+            </div>
+            <div class="tabs" role="tablist" aria-label="Forma de pago">
+                <button type="button" class="tab" role="tab" aria-selected="true">Mensual</button>
+                <button type="button" class="tab" role="tab" aria-selected="false">Anual · 2 meses gratis</button>
+            </div>
+        </div>
+        <div class="plans">
+            <article class="plan">
+                <div>
+                    <h3>Gratis</h3>
+                    <p class="muted small">Para empezar a organizarte</p>
+                </div>
+                <div class="plan-price">
+                    <b>$0</b>
+                    <span>para siempre</span>
+                </div>
+                <p class="small muted pegado-arriba">Sin tarjeta</p>
+                <a class="btn secondary" href='@Url.Action("Registrarse", "Sesiones")'>Empezar gratis</a>
+                <ul class="plan-features">
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Un adulto mayor</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Vos y un acompañante, de la familia o cuidadora</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Chat del grupo</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Agenda y recordatorios</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Medicación con avisos</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Episodios y signos vitales</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Ficha de emergencia con QR</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Hasta 30 documentos</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Juegos de estimulación</span></li>
+                    <li class="off"><span class="icono icono-cerrar icono-sm" aria-hidden="true"></span><span>Asistente con IA</span></li>
+                </ul>
+            </article>
+            <article class="plan featured">
+                <span class="plan-badge">El más elegido</span>
+                <div>
+                    <h3>Familia</h3>
+                    <p class="muted small">Para cuidar entre varios</p>
+                </div>
+                <div class="plan-price">
+                    <b>$9.900</b>
+                    <span>por mes</span>
+                </div>
+                <p class="small muted pegado-arriba">14 días gratis, sin tarjeta</p>
+                <a class="btn" href='@Url.Action("Registrarse", "Sesiones")'>Probar 14 días gratis</a>
+                <ul class="plan-features">
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Hasta 2 adultos mayores</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Vos y hasta 4 personas más, de la familia o cuidadoras</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Chat del grupo con asistente IA</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Agendá, registrá y preguntá desde el chat</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Resumen automático de estudios y recetas</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Actividades de estimulación personalizadas</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Informe para el médico</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Turnos, traspasos y gastos compartidos</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Documentos ilimitados</span></li>
+                </ul>
+            </article>
+            <article class="plan">
+                <div>
+                    <h3>Red de cuidado</h3>
+                    <p class="muted small">Para redes de cuidado grandes</p>
+                </div>
+                <div class="plan-price">
+                    <b>$19.900</b>
+                    <span>por mes</span>
+                </div>
+                <p class="small muted pegado-arriba">Cancelás cuando quieras</p>
+                <a class="btn secondary" href='@Url.Action("Registrarse", "Sesiones")'>Elegir Red de cuidado</a>
+                <ul class="plan-features">
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Todo lo del plan Familia</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Hasta 5 adultos mayores</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Personas ilimitadas en cada grupo</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Más de un responsable por grupo</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Profesionales invitados con acceso al informe</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Avisos por WhatsApp</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Tensiómetro y glucómetro conectados</span></li>
+                    <li class=""><span class="icono icono-check icono-sm" aria-hidden="true"></span><span>Atención prioritaria</span></li>
+                </ul>
+            </article>
+        </div>
+        <div class="institutions">
+            <span class="icon-badge"><span class="icono icono-personas" aria-hidden="true"></span></span>
+            <div class="grow">
+                <h3>Residencias, centros de día y empresas de cuidadores</h3>
+                <p class="small muted">Muchos residentes, equipos por turno, reportes para las familias y facturación por institución.</p>
+            </div>
+            <button type="button" class="btn secondary">Hablar con nosotros</button>
+        </div>
+        <p class="small muted">Precios de referencia en pesos argentinos, con IVA incluido.</p>
     </div>
-  </section>
-
-  <section class="lp-section lp-soft" id="preguntas">
+</section>
+<section class="lp-section lp-soft" id="preguntas">
     <div class="lp-wrap stack gap-20 ancho-lectura">
-      <div><div class="eyebrow">Preguntas frecuentes</div><h2 class="lp-h2"><span class="thin">Lo que nos</span> <span class="bold">suelen preguntar.</span></h2></div>
-      <details class="faq"><summary>¿La persona mayor tiene que usar la app?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary><p class="muted">No. La usan quienes la cuidan. Si puede y quiere, tiene un modo simple con letra grande que le muestra sus tomas y su agenda del día.</p></details><details class="faq"><summary>¿El asistente reemplaza al médico?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary><p class="muted">No. Ordena la información, responde con la historia que cargó el grupo y sugiere qué consultar. Las decisiones médicas siempre son de los profesionales.</p></details><details class="faq"><summary>¿Quién ve la información?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary><p class="muted">Solo las personas del grupo de cuidado. Quien crea el grupo es responsable y decide a quién sumar o quitar.</p></details><details class="faq"><summary>¿Puedo cambiar de plan?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary><p class="muted">Sí, cuando quieras. Si pasás a un plan menor, la información queda guardada.</p></details><details class="faq"><summary>¿Sirve para residencias o empresas de cuidadores?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary><p class="muted">Sí. Tenemos un plan para instituciones con varios residentes, turnos por equipo y reportes. Escribinos.</p></details>
+        <div>
+            <div class="eyebrow">Preguntas frecuentes</div>
+            <h2 class="lp-h2"><span class="thin">Lo que nos</span> <span class="bold">suelen preguntar.</span></h2>
+        </div>
+        <details class="faq">
+            <summary>¿La persona mayor tiene que usar la app?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary>
+            <p class="muted">No. La usan quienes la cuidan. Si puede y quiere, tiene un modo simple con letra grande que le muestra sus tomas y su agenda del día.</p>
+        </details>
+        <details class="faq">
+            <summary>¿El asistente reemplaza al médico?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary>
+            <p class="muted">No. Ordena la información, responde con la historia que cargó el grupo y sugiere qué consultar. Las decisiones médicas siempre son de los profesionales.</p>
+        </details>
+        <details class="faq">
+            <summary>¿Quién ve la información?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary>
+            <p class="muted">Solo las personas del grupo de cuidado. Quien crea el grupo es responsable y decide a quién sumar o quitar.</p>
+        </details>
+        <details class="faq">
+            <summary>¿Puedo cambiar de plan?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary>
+            <p class="muted">Sí, cuando quieras. Si pasás a un plan menor, la información queda guardada.</p>
+        </details>
+        <details class="faq">
+            <summary>¿Sirve para residencias o empresas de cuidadores?<span class="icono icono-flecha-abajo icono-md" aria-hidden="true"></span></summary>
+            <p class="muted">Sí. Tenemos un plan para instituciones con varios residentes, turnos por equipo y reportes. Escribinos.</p>
+        </details>
     </div>
-  </section>
-
-  <section class="lp-cta">
+</section>
+<section class="lp-cta">
     <div class="lp-wrap stack gap-18 centrado">
-      <h2 class="lp-h2"><span class="thin">No estás solo.</span> <span class="bold">Estamos para vos.</span></h2>
-      <p class="lp-lead">Creá el grupo de cuidado hoy y sumá a quienes acompañan.</p>
-      <a class="btn lg white" href='@Url.Action("Registrarse", "Sesiones")'><span class="icono icono-corazon icono-md" aria-hidden="true"></span> Crear cuenta gratis</a>
+        <h2 class="lp-h2"><span class="thin">No estás solo.</span> <span class="bold">Estamos para vos.</span></h2>
+        <p class="lp-lead">Creá el grupo de cuidado hoy y sumá a quienes acompañan.</p>
+        <a class="btn lg white" href='@Url.Action("Registrarse", "Sesiones")'><span class="icono icono-corazon icono-md" aria-hidden="true"></span> Crear cuenta gratis</a>
     </div>
     <div class="hero-wave"></div>
-  </section>
-
-  <footer class="lp-footer"><div class="lp-wrap row wrap separados gap-20">
-    <span class="lp-brand"><img src="~/img/logo.svg" alt="Bridge"><span><span class="brand-name">BRIDGE</span><span class="brand-tag bloque">Conservando la vida</span></span></span>
-    <div class="small muted stack gap-4"><span>contacto@@bridge.com</span><span>@@bridge.conservandolavida</span></div>
-    <div class="small muted stack gap-4"><span>Términos y condiciones</span><span>Política de privacidad</span></div>
-  </div></footer>
+</section>
+<footer class="lp-footer">
+    <div class="lp-wrap row wrap separados gap-20">
+        <span class="lp-brand"><img src="~/img/logo.svg" alt="Bridge"><span><span class="brand-name">BRIDGE</span><span class="brand-tag bloque">Conservando la vida</span></span></span>
+        <div class="small muted stack gap-4">
+            <span>contacto@@bridge.com</span>
+            <span>@@bridge.conservandolavida</span>
+        </div>
+        <div class="small muted stack gap-4">
+            <span>Términos y condiciones</span>
+            <span>Política de privacidad</span>
+        </div>
+    </div>
+</footer>
