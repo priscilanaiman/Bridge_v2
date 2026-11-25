@@ -471,3 +471,5 @@ td { padding: 10px; border-top: 1px solid var(--line); vertical-align: top; }
 .section-title { font-family: var(--font-display); font-size: 21px; font-weight: 600; }
 html { scroll-behavior: smooth; }
 .lp-section[id] { scroll-margin-top: 72px; }
+.form-error:empty { display: none; }
+.form-error::before { content: ""; width: 16px; height: 16px; flex: none; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l10 18H2z M12 10v5 M12 18v.5'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l10 18H2z M12 10v5 M12 18v.5'/%3E%3C/svg%3E") center / contain no-repeat; }

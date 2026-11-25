@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Ingresar";
+}
+
+<div class="auth">
+    <aside class="auth-brand">
+    <a class="lp-brand" href='@Url.Action("Index", "Home")' aria-label="Volver al inicio"><svg viewBox="45 272 497 216" role="img" aria-label="Bridge">
+    <defs>
+      <linearGradient id="lg-a-auth" x1="49.52" y1="419" x2="536.87" y2="419" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00a8a6"></stop><stop offset="1" stop-color="#00aed8"></stop></linearGradient>
+      <linearGradient id="lg-b-auth" x1="243.41" y1="340" x2="342.99" y2="340" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#02a8b1"></stop><stop offset="1" stop-color="#00acd3"></stop></linearGradient>
+    </defs>
+    <path fill="url(#lg-a-auth)" d="M535,416.65c-4.6-22.79-19.96-42.26-19.96-42.26-18.29-18.98-34.83-22.7-34.83-22.7-20.05-7.24-43.630-3.72-43.63-3.72-19.17,3.03-33.36,9.49-33.36,9.49-6.76,2.53-52.63,25.24-52.63,25.24l-57.52,34.24-17.22-11.54-51.85-30.91c-46.76-24.65-76.83-26.41-76.83-26.41-43.04-6.52-68.870,18.78-68.87,18.78-32.090,33.65-28.7,69.13-28.7,69.13v47.22c4.24,11.67,26.28,6.52,26.28,6.52,42.07-24.65,52.83-28.57,52.83-28.57,10.96-7.63,61.43-22.89,61.43-22.89,32.48-13.3,103.03-14.54,103.03-14.54,48.7-5.74,125.69,21.39,125.69,21.39,22.3,4.3,84.91,40.11,84.91,40.11,20.93,14.67,31.21,0,31.21,0,4.21-19.76,0-68.58,0-68.58ZM82.18,473.03s-7.83-55.37,32.48-79.04l.2,61.43-32.67,17.61ZM159.4,436.17l-35.41,13.5v-59.87c14.090-9.2,35.41-8.61,35.41-8.61v54.98ZM202.57,422.35l-34.83,9.59v-50.09c5.48-3.13,34.83,5.67,34.83,5.67v34.83ZM210.92,421.26v-29.35c10.57-1.37,49.11,22.7,49.11,22.7l-49.11,6.65ZM373.74,421.26l-49.11-6.65s38.54-24.07,49.11-22.7v29.35ZM417.22,431.94l-34.83-9.59v-34.83s29.35-8.8,34.83-5.67v50.09ZM461.29,449.67l-35.41-13.5v-54.98s21.33-.59,35.41,8.61v59.87ZM502.77,471.46l-32.67-17.61.2-61.43c40.3,23.67,32.48,79.04,32.48,79.04Z"></path>
+    <circle fill="#00a8a8" cx="123.55" cy="304.8" r="28.48"></circle>
+    <circle fill="#00add6" cx="468.65" cy="304.8" r="28.48"></circle>
+    <path fill="url(#lg-b-auth)" d="M338.43,309.94s-9-17.87-33.65-8.87c0,0-6.52,2.09-11.67,9.85-7.04-9.85-17.41-11.67-17.41-11.67-32.48-5.28-32.28,28.17-32.28,28.17,1.17,27,50.26,54.59,50.26,54.59,0,0,42.150-26.8,46.97-44.28,0,0,6.52-13.57-2.22-27.78Z"></path>
+  </svg><span><span class="brand-name">BRIDGE</span><span class="brand-tag" style="display:block">Conservando la vida</span></span></a>
+    <div class="stack" style="gap:14px"><h1 class="lp-h2"><span class="thin">Qué bueno</span> <span class="bold">verte de nuevo.</span></h1><p class="lp-lead hide-sm">Todo lo que el grupo fue registrando te está esperando: la agenda, la medicación y las novedades del chat.</p></div>
+    <p class="script hide-sm">Juntos somos puentes</p>
+    <svg class="hero-wave" viewBox="0 0 1200 80" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 52 C 220 8, 420 10, 640 40 S 1020 78, 1200 22 V80 H0z" style="fill:var(--wave-1)"></path>
+    <path d="M0 70 C 260 40, 520 44, 760 62 S 1080 74, 1200 54 V80 H0z" style="fill:var(--wave-2)"></path>
+  </svg>
+  </aside>
+    <div class="auth-form"><form class="auth-card" action='@Url.Action("Login", "Sesiones")' method="post" novalidate>
+      <div><div class="eyebrow">Ingresar</div><h2 class="auth-title">Hola de nuevo</h2><p class="muted">¿No tenés cuenta? <a href='@Url.Action("Registrarse", "Sesiones")'>Creá una gratis</a></p></div>
+      <div class="field"><label for="li-email">Email</label><input id="li-email" class="input" type="email" name="email" value="@ViewBag.Email" autocomplete="email"></div>
+      <div class="field"><label for="li-pass">Contraseña</label><input id="li-pass" class="input" type="password" name="contrasena" autocomplete="current-password"></div>
+      <p class="form-error" role="alert">@ViewBag.Error</p>
+      <button class="btn lg" type="submit">Ingresar</button>
+    </form></div>
+</div>
