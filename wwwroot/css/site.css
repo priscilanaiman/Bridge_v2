@@ -537,3 +537,14 @@ html { scroll-behavior: smooth; }
 .grupo-datos small { color: var(--muted); }
 .plan-pill > .icono { margin-left: 0; }
 .acciones-formulario { border-top: 1px solid var(--line); padding-top: 16px; }
+.icono-casa { -webkit-mask-image: url("../img/iconos/casa.svg"); mask-image: url("../img/iconos/casa.svg"); }
+.icono-lg { width: 22px; height: 22px; }
+a.group-btn { color: var(--ink); text-decoration: none; }
+.cambiar-grupo { font-size: 12px; font-weight: 600; color: var(--accent-text); text-decoration: underline; }
+.nav-link.deshabilitado { color: var(--muted); cursor: default; }
+.nav-link.deshabilitado:hover { background: none; }
+.proximamente { margin-left: auto; font-size: 11px; font-weight: 600; }
+.bottomnav-inner.dos-secciones { grid-template-columns: repeat(2, 1fr); }
+.bottomnav .deshabilitado { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; color: var(--muted); opacity: .6; font-size: 11.5px; font-weight: 600; }
+.miembros { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.miembro { display: flex; align-items: center; gap: 12px; }

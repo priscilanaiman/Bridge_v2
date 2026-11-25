@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Bridge</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@@300;400;500;600;700;800&family=Montserrat:wght@@300;400;500;600;700&family=Sacramento&display=swap">
+        <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    </head>
+    <body>
+        <div class="app">
+            <aside class="sidebar">
+                <a class="brand" href='@Url.Action("Index", "Inicio")' aria-label="Bridge, ir al inicio"><img src="~/img/logo.svg" alt="Bridge"><span class="brand-name">BRIDGE</span><span class="brand-tag">Conservando la vida</span></a>
+                <div class="group-switch">
+                    <a class="group-btn" href='@Url.Action("Index", "Inicio")' title="Cambiar de grupo">
+                        <span class="avatar sm fondo-celeste" aria-hidden="true">@ViewBag.Grupo.Iniciales</span>
+                        <span class="meta">
+                            <strong>@ViewBag.Grupo.Nombre @ViewBag.Grupo.Apellido</strong>
+                            <small>@ViewBag.Grupo.Edad años · Grupo de cuidado</small>
+                        </span>
+                        <span class="cambiar-grupo">Cambiar</span>
+                    </a>
+                </div>
+                <nav class="nav-group" aria-label="Secciones del grupo">
+                    <a class="nav-link" href='@Url.Action("Ver", "Grupos", new { id = ViewBag.Grupo.IdGrupo })' aria-current="@ViewBag.SeccionInicio"><span class="icono icono-casa" aria-hidden="true"></span><span>Inicio</span></a>
+                    <span class="nav-link deshabilitado"><span class="icono icono-chat" aria-hidden="true"></span><span>Chat</span><small class="proximamente">Próximamente</small></span>
+                </nav>
+                <div class="side-foot">
+                    <div class="plan-pill"><span class="icono icono-chispa icono-sm" aria-hidden="true"></span> Plan Gratis</div>
+                    <div class="me">
+                        <span class="avatar fondo-verde-agua" aria-hidden="true">@ViewBag.Iniciales</span>
+                        <div class="grow">
+                            <strong>@ViewBag.Nombre</strong>
+                            <small>Tu cuenta</small>
+                        </div>
+                        <a class="btn icon-only ghost sm" href='@Url.Action("CerrarSesion", "Sesiones")' aria-label="Cerrar sesión" title="Cerrar sesión"><span class="icono icono-salir icono-md" aria-hidden="true"></span></a>
+                    </div>
+                </div>
+            </aside>
+            <div class="main">
+                <header class="app-header">
+                    <div class="topbar">
+                        <a class="logo-mini" href='@Url.Action("Index", "Inicio")' aria-label="Bridge, ir al inicio"><img src="~/img/logo.svg" alt="Bridge"></a>
+                        <span class="grow"></span>
+                        <span class="avatar fondo-verde-agua" aria-hidden="true">@ViewBag.Iniciales</span>
+                        <a class="btn icon-only ghost sm" href='@Url.Action("CerrarSesion", "Sesiones")' aria-label="Cerrar sesión" title="Cerrar sesión"><span class="icono icono-salir icono-md" aria-hidden="true"></span></a>
+                    </div>
+                </header>
+                <main class="content">
+                    @RenderBody()
+                </main>
+            </div>
+            <nav class="bottomnav" aria-label="Navegación principal">
+                <div class="bottomnav-inner dos-secciones">
+                    <a href='@Url.Action("Ver", "Grupos", new { id = ViewBag.Grupo.IdGrupo })' aria-current="@ViewBag.SeccionInicio"><span class="icono icono-casa icono-lg" aria-hidden="true"></span><span>Inicio</span></a>
+                    <span class="deshabilitado"><span class="icono icono-chat icono-lg" aria-hidden="true"></span><span>Chat</span></span>
+                </div>
+            </nav>
+        </div>
+    </body>
+</html>

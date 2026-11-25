@@ -68,6 +68,37 @@ public class GruposController : Controller
         return View();
     }
 
+    public IActionResult Ver(int id)
+    {
+        string? idUsuario = HttpContext.Session.GetString("IdUsuario");
+        string? nombreUsuario = HttpContext.Session.GetString("Nombre");
+        if (idUsuario == null || nombreUsuario == null)
+        {
+            return RedirectToAction("Login", "Sesiones");
+        }
+
+        Grupo? grupo = _bd.ObtenerGrupo(id, int.Parse(idUsuario));
+        if (grupo == null)
+        {
+            return RedirectToAction("Index", "Inicio");
+        }
+
+        HttpContext.Session.SetString("IdGrupo", grupo.IdGrupo.ToString());
+        CargarUsuarioEnLaVista(nombreUsuario);
+        ViewBag.Grupo = grupo;
+        ViewBag.Miembros = _bd.ObtenerMiembrosDelGrupo(grupo.IdGrupo);
+        ViewBag.SeccionInicio = "page";
+        if (grupo.CondicionSalud == null)
+        {
+            ViewBag.CondicionSalud = "Sin condición de salud cargada";
+        }
+        else
+        {
+            ViewBag.CondicionSalud = grupo.CondicionSalud;
+        }
+        return View();
+    }
+
     private void CargarUsuarioEnLaVista(string nombreUsuario)
     {
         ViewBag.Nombre = nombreUsuario;

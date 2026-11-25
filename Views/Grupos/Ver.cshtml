@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Grupo de cuidado";
+    Layout = "_LayoutGrupo";
+}
+
+<section class="hero">
+    <span class="hero-heart" aria-hidden="true"></span>
+    <div class="eyebrow">Grupo de cuidado</div>
+    <h1 class="hero-title"><span class="thin">Grupo de</span><span class="bold">@ViewBag.Grupo.Nombre @ViewBag.Grupo.Apellido.</span></h1>
+    <p class="hero-sub"><strong>@ViewBag.Grupo.Edad años</strong></p>
+    <p class="hero-sub">@ViewBag.CondicionSalud</p>
+    <div class="hero-wave"></div>
+    <span class="script">Juntos somos puentes</span>
+</section>
+<section class="card">
+    <h2 class="section-title">Miembros</h2>
+    <ul class="miembros">
+        @foreach (Miembro miembro in ViewBag.Miembros)
+        {
+            <li class="miembro">
+                <span class="avatar fondo-verde-agua" aria-hidden="true">@miembro.Iniciales</span>
+                <span class="grupo-datos">
+                    <strong>@miembro.Nombre @miembro.Apellido</strong>
+                    <small>@miembro.Rol</small>
+                </span>
+            </li>
+        }
+    </ul>
+</section>
