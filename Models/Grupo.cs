@@ -9,6 +9,14 @@ public class Grupo
     public DateTime FechaNacimiento { get; set; }
     public string? CondicionSalud { get; set; }
 
+    public string Iniciales
+    {
+        get
+        {
+            return (Nombre.Substring(0, 1) + Apellido.Substring(0, 1)).ToUpper();
+        }
+    }
+
     public int Edad
     {
         get

@@ -528,3 +528,11 @@ html { scroll-behavior: smooth; }
 .fondo-verde { background: #3F9E6C; }
 .fondo-verde-claro { background: #5DBB8A; }
 .qr-chico { width: 110px; }
+
+.grupos { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.grupo-tarjeta { display: flex; align-items: center; gap: 14px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); text-decoration: none; }
+.grupo-tarjeta:hover { border-color: var(--brand-teal); }
+.grupo-datos { display: flex; flex-direction: column; gap: 2px; }
+.grupo-datos strong { font-size: 17px; }
+.grupo-datos small { color: var(--muted); }
+.plan-pill > .icono { margin-left: 0; }

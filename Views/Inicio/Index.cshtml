@@ -1,19 +1,27 @@
 @{
-    ViewData["Title"] = "Inicio";
+    ViewData["Title"] = "Mis grupos";
     Layout = "_LayoutPrivado";
 }
 
 <section class="hero">
     <span class="hero-heart" aria-hidden="true"></span>
-    <h1 class="hero-title"><span class="thin">Hola, @ViewBag.Nombre.</span><span class="bold">Empecemos a organizarnos.</span></h1>
-    <p class="hero-sub">Bridge reúne a la familia y a quienes cuidan en un grupo de cuidado, con un chat compartido para que nadie se pierda nada.</p>
+    <h1 class="hero-title"><span class="thin">Hola, @ViewBag.Nombre.</span><span class="bold">Tus grupos de cuidado.</span></h1>
+    <p class="hero-sub">Elegí un grupo para ver a sus miembros y conversar en el chat.</p>
     <div class="hero-wave"></div>
     <span class="script">Juntos somos puentes</span>
 </section>
-<section class="card">
-    <div class="empty">
-        <span class="icon-badge soft"><span class="icono icono-personas" aria-hidden="true"></span></span>
-        <p class="muted">Todavía no tenés grupos. Creá uno para la persona que cuidás, o pedile a quien administra su grupo que te invite.</p>
-        <button type="button" class="btn sm secondary"><span class="icono icono-mas icono-sm" aria-hidden="true"></span> Crear grupo de cuidado</button>
-    </div>
+<section class="grupos">
+    @foreach (Grupo grupo in ViewBag.Grupos)
+    {
+        <a class="grupo-tarjeta" href='@Url.Action("Ver", "Grupos", new { id = grupo.IdGrupo })'>
+            <span class="avatar lg fondo-celeste" aria-hidden="true">@grupo.Iniciales</span>
+            <span class="grupo-datos">
+                <strong>@grupo.Nombre @grupo.Apellido</strong>
+                <small>@grupo.Edad años</small>
+            </span>
+        </a>
+    }
 </section>
+<div class="actions">
+    <a class="btn" href='@Url.Action("Crear", "Grupos")'><span class="icono icono-mas icono-sm" aria-hidden="true"></span> Crear grupo de cuidado</a>
+</div>
