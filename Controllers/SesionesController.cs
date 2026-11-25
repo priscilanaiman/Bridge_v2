@@ -84,6 +84,12 @@ public class SesionesController : Controller
         return View();
     }
 
+    public IActionResult CerrarSesion()
+    {
+        HttpContext.Session.Clear();
+        return RedirectToAction("Index", "Home");
+    }
+
     private void GuardarUsuarioEnSesion(Usuario usuario)
     {
         HttpContext.Session.SetString("IdUsuario", usuario.IdUsuario.ToString());
