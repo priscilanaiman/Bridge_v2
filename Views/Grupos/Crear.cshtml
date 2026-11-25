@@ -1,0 +1,54 @@
+@{
+    ViewData["Title"] = "Nuevo grupo de cuidado";
+    Layout = "_LayoutPrivado";
+}
+
+<div class="page-head">
+    <div class="grow">
+        <div class="eyebrow">Mis grupos</div>
+        <h1 class="page-title"><span class="thin">Nuevo</span> grupo de cuidado</h1>
+        <p class="page-sub">Un grupo de cuidado reúne a la familia y a quienes cuidan a una persona mayor. Después vas a poder sumar a los demás.</p>
+    </div>
+</div>
+<form class="card wizard-card" action='@Url.Action("Crear", "Grupos")' method="post" novalidate>
+    <h2 class="section-title">¿A quién van a cuidar?</h2>
+    <div class="form-grid">
+        <div class="field">
+            <label for="gr-nombre">Nombre</label>
+            <input id="gr-nombre" class="input" type="text" name="nombre" value="@ViewBag.NombreAdultoMayor" placeholder="Ej.: Elena">
+        </div>
+        <div class="field">
+            <label for="gr-apellido">Apellido</label>
+            <input id="gr-apellido" class="input" type="text" name="apellido" value="@ViewBag.Apellido" placeholder="Ej.: Martínez">
+        </div>
+    </div>
+    <div class="form-grid">
+        <div class="field">
+            <label for="gr-nacimiento">Fecha de nacimiento</label>
+            <input id="gr-nacimiento" class="input" type="date" name="fechaNacimiento" value="@ViewBag.FechaNacimiento">
+        </div>
+        <div class="field">
+            <label for="gr-rol">Vos sos su…</label>
+            <select id="gr-rol" class="input" name="rol">
+                <option value="">Elegí una opción</option>
+                <option>Hijo/a</option>
+                <option>Nieto/a</option>
+                <option>Sobrino/a</option>
+                <option>Hermano/a</option>
+                <option>Esposo/a</option>
+                <option>Yerno/Nuera</option>
+                <option>Cuidador/a</option>
+                <option>Otros</option>
+            </select>
+        </div>
+    </div>
+    <div class="field">
+        <label for="gr-condicion">Condición de salud (opcional)</label>
+        <textarea id="gr-condicion" class="input" name="condicionSalud" placeholder="Ej.: Alzheimer leve, hipertensión">@ViewBag.CondicionSalud</textarea>
+    </div>
+    <p class="form-error" role="alert">@ViewBag.Error</p>
+    <div class="actions separados acciones-formulario">
+        <a class="btn ghost" href='@Url.Action("Index", "Inicio")'>Cancelar</a>
+        <button class="btn" type="submit"><span class="icono icono-corazon icono-md" aria-hidden="true"></span> Crear grupo</button>
+    </div>
+</form>

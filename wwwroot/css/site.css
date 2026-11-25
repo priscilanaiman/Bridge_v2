@@ -536,3 +536,4 @@ html { scroll-behavior: smooth; }
 .grupo-datos strong { font-size: 17px; }
 .grupo-datos small { color: var(--muted); }
 .plan-pill > .icono { margin-left: 0; }
+.acciones-formulario { border-top: 1px solid var(--line); padding-top: 16px; }
